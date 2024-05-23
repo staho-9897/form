@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <title>forme project2</title>
+        <style>
+            body{
+                width: 100vw;
+                height: 100vh;
+                background-image: url('./hogai10.jpg');
+                border-radius: 10px;
+                background-size: cover;
+                text-align:center ;
+            }
+            table{
+                width: 50%;
+                height: 50%;
+                border-collapse: separate;
+                border-style: double;
+                text-align: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-weight: 800;
+                color: black;
+                margin-top: 15px;
+            }input [type="text"],input[type=ID]{
+     padding: 10px;
+     width: 60%;
+     height: 20px;
+            }
+        select{
+            width: 50;
+            padding: 5px;
+
+        }
+    
+    button:hover{
+        background-color: brown
+        color(srgb red green blue);
+    }
+    button{
+        width: 50%;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: rgb(158, 94, 11);
+        margin-top: 8px;
+    } 
+    td>h4{
+        margin: 8px;
+        font-weight: 800;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 8px;
+     } 
+     td{ 
+            padding: 10px;
+            text-align: center;
+        
+        } 
+      caption{
+    color:color(from color srgb r g b);
+    border: 4px groove;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 800;
+      }
+
+
+        </style>
+    </head>
+    <body>
+        <center></center>
+        <form onsubmit="handleSubmit(event)" id="form">
+            <table align="center">
+                <caption>Evaluation Form</caption>
+                <tr>
+                    <td>Name</td>
+                    <td><input type id="name" text placeholder="Enter your name"></td>
+                </tr>
+                <tr>
+                    <td>Last name</td>
+                    <td><input type id=" lastname" text placeholder="Enter your name"></td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td><input type id="mail" text placeholder="Enter your name"></td>
+                </tr>
+                <tr>
+                    <td>Id Number</td>
+                    <td><input type id=" id" text placeholder="Enter your name"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                   <input type="radio" value="Male" name="Gender"/> Male
+                   <input type="radio" value="Female" name="Gender"/> Female
+                   </td>
+                </tr>
+                <td>section</td>
+                    <td>
+                   <input type="checkbox" class="section" name="PPA" value="Adminastration"/> Public Policy
+                   <input type="checkbox" class="section" name="BBA" value="Economic"/> Business Administration
+                   <input type="checkbox" class="section" name="ACCA" value="Accounting"/> Accounting
+                   </td>
+                </tr>
+                <tr>
+                    <td>Possition</td>
+                    <td>
+                        <select name="Possition">
+                            <option value="HR">HR</option>
+                            <option value="BBA">BBA</option>
+                            <option value="ACCA">ACCA</option>
+                        </select>
+                   </td>
+                </tr>
+                <tr>     
+                    <td>Offer</td>
+                    <td>
+                   <textarea style="width:50% height 5" cols= 40 rows=5 id="textarea" placeholder="Please Enter your Offers ...."></textarea>
+                </td>
+                </tr>
+                <tr>     
+                    <td>Your Reports</td>
+                    <td>
+    
+                        <input type="file" id="file"/>        
+    </td>
+                </tr>  
+                <tr>     
+                    <td colspan="2">
+    <h4>Before Submitting the form please check Your Deteals correctly.</h4>
+    </td>
+                </tr>
+                <tr>     
+                    <td colspan="2">
+                        <button type="submit">submit</button>
+                    </td>
+                              </tr>
+            </table>
+            
+        </form> 
+    </center>
+                <script>
+                function handleSubmit(event){
+                
+              event.preventDefault();
+
+              var name=document.getElementById('name');
+              console.log(`you are ${name.value}`);
+              var lastname=document.getElementById('lastname');
+              console.log(`your last name ${lastname.value}`);
+              var email=document.getElementById('mail');
+              console.log(`your e-mail ${ email.value}`);
+                
+              var IdNumber=document.getElementById('id');
+              console.log(`you are IdNumber.value}`);
+              var Offers=document.getElementById('textarea');
+              console.log(`you are ${Offer.value}`);
+              var section=document.getElementsByClassName('section')
+              document.getElementById('NameReswedeeult').innerHTML=`<h3>Your name $ {name.value} </h3>`;
+              document.getElementById('LastnameResult').innerHTML=`<h3>Your Last name  $ {lastname.value} </h3>`;
+              document.getElementById('E-mailResult').innerHTML=`<h3>Your Last name  $ {E-mail.value} </h3>`;
+              document.getElementById('Id NumberResult').innerHTML=`<h3>Your 'Id Number $ {IdNumber.value} </h3>`;
+              document.getElementById('OfferResult').innerHTML=`<h3>Your Offer' $ {Offers.value} </h3>`;
+              
+              
+                }
+                </script> 
+
+    </body>
+
+</html>
